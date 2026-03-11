@@ -1,0 +1,80 @@
+using System;
+
+class Pessoa
+{
+    // Atributos
+    public string nome;
+    public int idade;
+    public string email;
+    public string numero;
+    public string cep;
+    public string cpf;
+    public char sexo;
+    public double altura;
+
+    // Métodos
+    public void falar(string mensagem)
+    {
+        Console.WriteLine(nome + " disse: " + mensagem);
+    }
+
+    public void correr(double distancia)
+    {
+        Console.WriteLine(nome + " correu " + distancia + " km");
+    }
+
+    public void trabalhar(double horas)
+    {
+        Console.WriteLine(nome + " trabalhou por " + horas + " horas");
+    }
+
+    public void estudar(int horas)
+    {
+        Console.WriteLine(nome + " estudou por " + horas + " horas");
+    }
+
+    public void mostrarCarteira(bool temCarteira)
+    {
+        Console.WriteLine("Tem carteira? " + temCarteira);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Pessoa p1 = new Pessoa();
+
+        Console.Write("Digite seu nome: ");
+        p1.nome = Console.ReadLine();
+
+        Console.Write("Digite sua idade: ");
+        p1.idade = int.Parse(Console.ReadLine());
+
+        Console.Write("Digite seu email: ");
+        p1.email = Console.ReadLine();
+
+        Console.Write("Digite seu número: ");
+        p1.numero = Console.ReadLine();
+
+        Console.Write("Digite seu CEP: ");
+        p1.cep = Console.ReadLine();
+
+        Console.Write("Digite seu CPF: ");
+        p1.cpf = Console.ReadLine();
+
+        Console.Write("Digite seu sexo (M/F): ");
+        p1.sexo = char.Parse(Console.ReadLine());
+
+        Console.Write("Digite sua altura: ");
+        p1.altura = double.Parse(Console.ReadLine());
+
+        Console.WriteLine();
+
+        p1.falar("Olá!");
+        p1.correr(2.5);
+        p1.trabalhar(8);
+        p1.estudar(3);
+        p1.mostrarCarteira(true);
+    }
+}
